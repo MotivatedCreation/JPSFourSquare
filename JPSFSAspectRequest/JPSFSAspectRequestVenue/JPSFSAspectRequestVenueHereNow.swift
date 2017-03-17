@@ -16,7 +16,7 @@ import Foundation
 
 class JPSFSAspectRequestVenueHereNow: JPSFSPagedAspectRequestVenue
 {
-    override var maxLimit: Int? {
+    override var maxLimit: Int {
         get { return 500 }
     }
     

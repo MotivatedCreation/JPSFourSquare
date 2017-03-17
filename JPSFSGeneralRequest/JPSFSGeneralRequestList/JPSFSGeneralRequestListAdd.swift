@@ -11,22 +11,22 @@ import Foundation
 
 class JPSFSGeneralRequestListAdd: JPSFSGeneralRequestList
 {
-    /*
+    /**
         required The name of the list.
     */
     var name: String!
     
-    /*
+    /**
         The description of the list.
      */
     var description: String?
     
-    /*
+    /**
         Boolean indicating if this list can be edited by friends.
      */
     var collaborative: Bool?
     
-    /*
+    /**
         The id of a photo that should be set as the list photo.
      */
     var photoID: String?

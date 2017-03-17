@@ -9,7 +9,7 @@
 import Foundation
 
 
-/*
+/**
     https://developer.foursquare.com/docs/venues/tips
  */
 
@@ -23,12 +23,12 @@ class JPSFSAspectRequestVenueTips: JPSFSPagedAspectRequestVenue
         case popular = "popular"
     }
     
-    /*
+    /**
         One of friends, recent, or popular.
      */
     var sort: Sort?
     
-    override var maxLimit: Int? {
+    override var maxLimit: Int {
         get { return 500 }
     }
     

@@ -9,14 +9,14 @@
 import Foundation
 
 
-/*
+/**
  https://developer.foursquare.com/docs/users/tastes
  */
 
 
 class JPSFSAspectRequestUserTastes: JPSFSAspectRequestUser
 {
-    /*
+    /**
         Identity of the user to get tastes for. Currently, only the user ID of the acting user is supported.
      */
     var userID: String!

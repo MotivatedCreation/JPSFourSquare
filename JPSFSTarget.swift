@@ -9,7 +9,7 @@
 import Foundation
 
 
-/*
+/**
     https://developer.foursquare.com/docs/responses/target.html
 */
 
@@ -27,12 +27,12 @@ class JPSFSTarget
         case url
     }
     
-    /*
+    /**
         The type of the associated object. Valid values are "user", "checkin", "venue", "tip", "badge", "special", and "url".
      */
     internal(set) var type: String!
     
-    /*
+    /**
         An object of the type specified by type -- one of a user, a checkin, a venue, a tip, or an url object with a single "url" key.
      */
     //internal(set) var object: String!

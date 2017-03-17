@@ -9,22 +9,22 @@
 import Foundation
 
 
-/*
+/**
  https://developer.foursquare.com/docs/users/friends
  */
 
 
-class JPSFSAspectRequestUserFriends: JPSFSAspectRequestUser
+class JPSFSAspectRequestUserFriends: JPSFSPagedAspectRequestUser
 {
-    /*
+    /**
         Identity of the user to get friends of. Pass self to get friends of the acting user.
      */
     var userID: String!
     
-    /*
+    /**
         Number of results to return, up to 500.
      */
-    override var maxLimit: Int? {
+    override var maxLimit: Int {
         get { return 500 }
     }
     

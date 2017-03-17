@@ -11,12 +11,12 @@ import Foundation
 
 class JPSFSGeneralRequestVenueManaged: JPSFSGeneralRequestVenue
 {
-    /*
+    /**
         Number of managed venues to return. Defaults to 100, maximum is 1000.
     */
     var limit: Int = 100
     
-    /*
+    /**
         Number of venues to skip over for paging. Defaults to 0.
      */
     var offset: Int = 0

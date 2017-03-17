@@ -11,12 +11,12 @@ import Foundation
 
 class JPSFSGeneralRequestVenueGroupAdd: JPSFSGeneralRequestVenueGroup
 {
-    /*
+    /**
         Required. The name to give the group.
     */
     var name: String!
     
-    /*
+    /**
         Comma-delimited list of venue IDs to add to the group. If this parameter is not specified, then the venue group will initially be empty.
      */
     var venueIDs: [String]?

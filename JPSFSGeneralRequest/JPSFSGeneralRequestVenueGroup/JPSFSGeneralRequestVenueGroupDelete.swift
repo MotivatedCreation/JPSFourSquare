@@ -11,7 +11,7 @@ import Foundation
 
 class JPSFSGeneralRequestVenueGroupDelete: JPSFSGeneralRequestVenueGroup
 {
-    /*
+    /**
         required The ID of the venue group to delete.
     */
     var venueGroupID: String!

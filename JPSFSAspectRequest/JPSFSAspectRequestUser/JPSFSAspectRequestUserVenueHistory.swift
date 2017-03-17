@@ -9,29 +9,29 @@
 import Foundation
 
 
-/*
+/**
     https://developer.foursquare.com/docs/users/venuehistory
 */
 
 
 class JPSFSAspectRequestUserVenueHistory: JPSFSAspectRequestUser
 {
-    /*
+    /**
         For now, only self is supported.
     */
     var userID: String!
     
-    /*
+    /**
         Seconds since epoch.
      */
     var beforeTimestamp: TimeInterval?
     
-    /*
+    /**
         Seconds after epoch.
      */
     var afterTimestamp: TimeInterval?
     
-    /*
+    /**
         Limits returned venues to those in this category. If specifying a top-level category, all sub-categories will also match the query.
      */
     var categoryId: String?

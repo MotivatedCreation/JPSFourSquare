@@ -11,7 +11,7 @@ import Foundation
 
 class JPSFSGeneralRequestCheckinResolve: JPSFSGeneralRequestCheckin
 {
-    /*
+    /**
         Required. The short ID at the end of a swarmapp.com link, e.g., https://swarmapp.com/c/abc123ZYX
     */
     var shortID: String!

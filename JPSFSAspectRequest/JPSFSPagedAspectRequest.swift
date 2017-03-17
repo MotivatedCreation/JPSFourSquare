@@ -11,27 +11,17 @@ import Foundation
 
 class JPSFSPagedAspectRequest: JPSFSAspectRequest
 {
-    /*
-        Number of results to return.
+    /**
+     Number of results to return.
      */
     var limit: Int
-    {
-        get { return self.limit }
-        set
         {
-            guard let _ = self.maxLimit else
-            {
-                self.limit = newValue
-                
-                return
-            }
-            
-            if newValue > self.maxLimit! { self.limit = self.maxLimit! }
-        }
+        get { return self.limit }
+        set { if newValue > self.maxLimit { self.limit = self.maxLimit } }
     }
     
-    /*
-        Used to page through results. Must specify a group
+    /**
+     Used to page through results. Must specify a group
      */
     var offset: Int = 0
     

@@ -11,7 +11,7 @@ import Foundation
 
 class JPSFSUserResource: JPSFSResource
 {
-    /*
+    /**
      If the user is not clear from context, then a compact user is present
      */
     internal(set) var user: JPSFSUser?

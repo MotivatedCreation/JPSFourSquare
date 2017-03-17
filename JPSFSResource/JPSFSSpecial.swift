@@ -9,7 +9,7 @@
 import Foundation
 
 
-/*
+/**
    https://developer.foursquare.com/docs/responses/special
 */
 
@@ -31,42 +31,42 @@ class JPSFSSpecial: JPSFSResource
         case locked
     }
     
-    /*
+    /**
         count or frequency
      */
     internal(set) var type: `Type`!
     
-    /*
+    /**
         A message describing the special.
      */
     internal(set) var message: String!
     
-    /*
+    /**
         A description of how to unlock the special.
      */
     internal(set) var description: String!
     
-    /*
+    /**
         The specific rules for this special.
      */
     internal(set) var finePrint: String!
     
-    /*
+    /**
         True or false indicating if this special is unlocked for the acting user.
      */
     internal(set) var unlocked: Bool!
     
-    /*
+    /**
         The name of the icon to use: http://foursquare.com/img/specials/icon.png
      */
     internal(set) var icon: String!
     
-    /*
+    /**
         The header text describing the type of special.
      */
     internal(set) var title: String!
     
-    /*
+    /**
         Possible values:
      
         unlocked
@@ -86,27 +86,27 @@ class JPSFSSpecial: JPSFSResource
      */
     internal(set) var state: State!
     
-    /*
+    /**
         A description of how close you are to unlocking the special. Either the number of people who have already unlocked the special (flash and swarm specials), or the number of your friends who have already checked in (friends specials)
      */
     internal(set) var progress: Int!
     
-    /*
+    /**
         A label describing what the number in the progress field means.
      */
     internal(set) var progressDescription: String!
     
-    /*
+    /**
         Minutes remaining until the special can be unlocked (flash special only).
      */
     internal(set) var detail: TimeInterval!
     
-    /*
+    /**
         A number indicating the maximum (swarm, flash) or minimum (friends) number of people allowed to unlock the special.
      */
     internal(set) var target: Int!
     
-    /*
+    /**
         A list of friends currently checked in, as compact user objects (friends special only).
      */
     internal(set) var friendsHere: [JPSFSUser]!

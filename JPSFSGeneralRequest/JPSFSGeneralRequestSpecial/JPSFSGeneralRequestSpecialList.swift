@@ -19,12 +19,12 @@ class JPSFSGeneralRequestSpecialList: JPSFSGeneralRequestSpecial
         case all = "all"
     }
     
-    /*
+    /**
         comma-separated list of venue IDs; filters results to the specials assigned to the venue(s).
     */
     var venueID: [String]?
     
-    /*
+    /**
         (optional, requires venueId) which specials to return: pending, active, expired, all
     */
     var status: Status?

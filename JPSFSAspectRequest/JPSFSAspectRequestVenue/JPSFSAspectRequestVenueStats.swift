@@ -9,19 +9,19 @@
 import Foundation
 
 
-/*
+/**
     https://developer.foursquare.com/docs/venues/stats
  */
 
 
 class JPSFSAspectRequestVenueStats: JPSFSAspectRequestVenue
 {
-    /*
+    /**
         The start of the time range to retrieve stats for (seconds since epoch). If omitted, all-time stats will be returned.
      */
     var startAt: TimeInterval?
     
-    /*
+    /**
         The end of the time range to retrieve stats for (seconds since epoch). If omitted, the current time is assumed.
      */
     var endAt: TimeInterval?

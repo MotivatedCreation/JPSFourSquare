@@ -9,14 +9,14 @@
 import Foundation
 
 
-/*
+/**
  https://developer.foursquare.com/docs/responses/campaign.html
  */
 
 
 class JPSFSCampaign: JPSFSResource
 {
-    /*
+    /**
         An object containing:
         id
             A unique identifier for this special.
@@ -27,17 +27,17 @@ class JPSFSCampaign: JPSFSResource
      */
     //internal(set) var special: String!
     
-    /*
+    /**
         DateTime when the campaign is to be started (seconds since epoch)
      */
     internal(set) var startsAt: TimeInterval!
     
-    /*
+    /**
         DateTime when the campaign is to be automatically deactivated (seconds since epoch)
      */
     internal(set) var endsAt: TimeInterval!
     
-    /*
+    /**
         An object containing:
         count
             A count of venues
@@ -46,7 +46,7 @@ class JPSFSCampaign: JPSFSResource
      */
     internal(set) var venues: [String]!
     
-    /*
+    /**
         An object containing:
         count
             A count of venuegroups

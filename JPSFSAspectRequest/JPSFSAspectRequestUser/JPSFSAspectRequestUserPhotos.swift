@@ -9,22 +9,22 @@
 import Foundation
 
 
-/*
+/**
  https://developer.foursquare.com/docs/users/photos
  */
 
 
 class JPSFSAspectRequestUserPhotos: JPSFSPagedAspectRequestUser
 {
-    /*
+    /**
         User ID to retrieve photos for.
     */
     var userID: String!
     
-    /*
+    /**
      Number of results to return, up to 500.
      */
-    override var maxLimit: Int? {
+    override var maxLimit: Int {
         get { return 500 }
     }
     

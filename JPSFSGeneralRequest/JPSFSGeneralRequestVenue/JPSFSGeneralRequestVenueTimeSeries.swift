@@ -22,22 +22,22 @@ class JPSFSGeneralRequestVenueTimeSeries: JPSFSGeneralRequestVenue
         case hours
     }
     
-    /*
+    /**
         A comma-separated list of venue ids to retrieve series data for. The current user must be the manager of all venues specified.
     */
     var venueIDs: [String]?
     
-    /*
+    /**
         required. The start of the time range to retrieve stats for (seconds since epoch).
     */
     var startAt: TimeInterval!
     
-    /*
+    /**
         The end of the time range to retrieve stats for (seconds since epoch). If omitted, the current time is assumed.
     */
     var endAt: TimeInterval?
     
-    /*
+    /**
         Specifies which fields to return. May be one or more of totalCheckins, newCheckins, uniqueVisitors, sharing, genders, ages, hours, separated by commas.
     */
     var fields: [Fields]?

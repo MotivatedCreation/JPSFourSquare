@@ -9,7 +9,7 @@
 import Foundation
 
 
-/*
+/**
     https://developer.foursquare.com/docs/venues/listed
  */
 
@@ -25,7 +25,7 @@ class JPSFSAspectRequestVenueListed: JPSFSAspectRequestVenue
         case other = "other"
     }
     
-    /*
+    /**
         can be created, edited, followed, friends, other. If no acting user is present, only other is supported.
      */
     var group: Group?

@@ -9,29 +9,29 @@
 import Foundation
 
 
-/*
+/**
  https://developer.foursquare.com/docs/users/venuelikes
  */
 
 
-class JPSFSAspectRequestUserVenueLikes: JPSFSAspectRequestUser
+class JPSFSAspectRequestUserVenueLikes: JPSFSPagedAspectRequestUser
 {
-    /*
+    /**
         User ID or self
      */
     var userID: String!
     
-    /*
+    /**
         Seconds since epoch.
      */
     var beforeTimestamp: TimeInterval?
     
-    /*
+    /**
         Seconds since epoch.
      */
     var afterTimestamp: TimeInterval?
     
-    /*
+    /**
         Limits returned venues to those in this category. If specifying a top-level category, all sub-categories will also match the query.
      */
     var categoryID: String?

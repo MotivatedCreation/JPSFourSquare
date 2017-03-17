@@ -17,22 +17,22 @@ class JPSFSGeneralRequestTipAdd: JPSFSGeneralRequestTip
         case facebook = "facebook"
     }
     
-    /*
+    /**
         required The venue where you want to add this tip.
     */
     var venueID: String!
     
-    /*
+    /**
         required The text of the tip, up to 200 characters.
      */
     var text: String!
     
-    /*
+    /**
         A URL related to this tip.
      */
     var url: URL?
     
-    /*
+    /**
         Whether to broadcast this tip. Send twitter if you want to send to twitter, facebook if you want to send to facebook, or twitter,facebook if you want to send to both.
      */
     var broadcast: [Broadcast]?

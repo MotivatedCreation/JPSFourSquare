@@ -11,17 +11,17 @@ import Foundation
 
 class JPSFSGeneralRequestVenueTrending: JPSFSGeneralRequestVenue
 {
-    /*
+    /**
         required Latitude and longitude of the user's location.
      */
     var ll: (latitude: Double, longitude: Double)!
     
-    /*
+    /**
         Number of results to return, up to 50.
      */
     var limit: Int?
     
-    /*
+    /**
         Radius in meters, up to approximately 2000 meters.
      */
     var radius: Float?

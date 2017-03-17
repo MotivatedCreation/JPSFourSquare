@@ -11,12 +11,12 @@ import Foundation
 
 class JPSFSGeneralRequestUpdateNotifications: JPSFSGeneralRequestUpdate
 {
-    /*
+    /**
         Maximum number of results to return, up to 99. Notifications are grouped over time, so there will usually be fewer than 99 results available at any given time.
     */
     var limit: Int?
     
-    /*
+    /**
         Used to page through results. Only the 99 most recent notifications are visible, so offset must be no more than 99 - limit.
     */
     var offset: Int?

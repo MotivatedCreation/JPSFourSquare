@@ -18,32 +18,32 @@ class JPSFSGeneralRequestPageUpdateAdd: JPSFSGeneralRequestPageUpdate
         case `private` = "private"
     }
     
-    /*
+    /**
         required id of the page to associate with the broadcast. To find the page for a venue you can look at the page object in the venue response.
     */
     var pageID: String!
     
-    /*
+    /**
         The venue group from which to broadcast an update.
      */
     var groupID: String?
     
-    /*
+    /**
         A venue from which to broadcast an update.
      */
     var venueID: String?
     
-    /*
+    /**
         Text associated with the broadcast. 160 characters max, 10 characters min.
      */
     var shout: String?
     
-    /*
+    /**
         An optional photo to attach to the broadcast. For a new photo, you should use the photo add endpoint and specify only the pageId parameter.
      */
     var photoID: String?
     
-    /*
+    /**
         Additional places to send the broadcast to. Accepts a comma-delimited list of values:
         facebook
             share on facebook

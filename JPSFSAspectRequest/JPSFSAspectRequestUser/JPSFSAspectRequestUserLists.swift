@@ -9,12 +9,12 @@
 import Foundation
 
 
-/*
+/**
  https://developer.foursquare.com/docs/users/lists
  */
 
 
-class JPSFSAspectRequestUserLists: JPSFSAspectRequestUser
+class JPSFSAspectRequestUserLists: JPSFSPagedAspectRequestUser
 {
     enum Group: String
     {
@@ -25,22 +25,22 @@ class JPSFSAspectRequestUserLists: JPSFSAspectRequestUser
         case suggested = "suggested"
     }
     
-    /*
+    /**
         Identity of the user to get lists for. Pass self to get lists of the acting user.
      */
     var userID: String!
     
-    /*
+    /**
         can be created (lists created by this user), edited (other people's lists this user has edited), followed (lists this user follows), friends (lists from this user's friends), and suggested (lists relevant to the user's current location).
      */
     var group: Group?
     
-    /*
+    /**
         Location of the user, required in order to receive the suggested group.
      */
     var ll: (latitude: Double, longitude: Double)?
     
-    /*
+    /**
         Number of results to return, up to 200.
      */
     override var maxLimit: Int {

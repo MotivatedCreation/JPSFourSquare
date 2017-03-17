@@ -12,32 +12,32 @@ import CoreLocation
 
 class JPSFSGeneralRequestSpecialSearch: JPSFSGeneralRequestSpecial
 {
-    /*
+    /**
         Required. Latitude and longitude to search near.
     */
     var ll: (latitude: Double, longitude: Double)!
     
-    /*
+    /**
         Limit results to venues within this many meters of the specified location. Defaults to a city-wide area.
      */
     var radius: Int?
     
-    /*
+    /**
         Accuracy of latitude and longitude, in meters.
      */
     var llAcc: Float?
     
-    /*
+    /**
         Altitude of the user's location, in meters.
      */
     var alt: Float?
     
-    /*
+    /**
         Accuracy of the user's altitude, in meters.
      */
     var altAcc: Float?
     
-    /*
+    /**
         Number of results to return, up to 50.
      */
     var limit: Int?

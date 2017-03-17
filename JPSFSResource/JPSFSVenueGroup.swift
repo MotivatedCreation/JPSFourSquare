@@ -9,19 +9,19 @@
 import Foundation
 
 
-/*
+/**
  https://developer.foursquare.com/docs/responses/venuegroup
  */
 
 
 class JPSFSVenueGroup: JPSFSResource
 {
-    /*
+    /**
         The name of the venue group
     */
     internal(set) var name: String!
     
-    /*
+    /**
      An object containing:
         count	A count of venues
         items	An array of venue ids

@@ -10,7 +10,7 @@ import Foundation
 
 class JPSFSResource
 {
-    /*
+    /**
         A unique identifier for this object.
      */
     internal(set) var id: String!

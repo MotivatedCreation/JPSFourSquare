@@ -9,14 +9,14 @@
 import Foundation
 
 
-/*
+/**
  https://developer.foursquare.com/docs/users/mayorships
  */
 
 
 class JPSFSAspectRequestUserMayorships: JPSFSAspectRequestUser
 {
-    /*
+    /**
         Identity of the user to get mayorships for. Pass self to get friends of the acting user.
      */
     var userID: String!

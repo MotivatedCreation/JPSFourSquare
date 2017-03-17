@@ -11,12 +11,12 @@ import Foundation
 
 class JPSFSLink
 {
-    /*
+    /**
         Title of the link.
      */
     internal(set) var title: String!
     
-    /*
+    /**
         URL of the link.
      */
     internal(set) var url: URL!

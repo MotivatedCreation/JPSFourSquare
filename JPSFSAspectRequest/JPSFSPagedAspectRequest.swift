@@ -35,7 +35,7 @@ class JPSFSPagedAspectRequest: JPSFSAspectRequest
      */
     var offset: Int = 0
     
-    var maxLimit: Int? {
+    var maxLimit: Int {
         get { return 50 }
     }
     

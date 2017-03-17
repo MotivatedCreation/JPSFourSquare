@@ -14,7 +14,7 @@ import Foundation
  */
 
 
-class JPSFSAspectRequestUserPhotos: JPSFSAspectRequestUser
+class JPSFSAspectRequestUserPhotos: JPSFSPagedAspectRequestUser
 {
     /*
         User ID to retrieve photos for.
@@ -22,14 +22,11 @@ class JPSFSAspectRequestUserPhotos: JPSFSAspectRequestUser
     var userID: String!
     
     /*
-        Number of results to return, up to 500.
+     Number of results to return, up to 500.
      */
-    var limit: Int?
-    
-    /*
-        Used to page through results.
-     */
-    var offset: Int?
+    override var maxLimit: Int? {
+        get { return 500 }
+    }
     
     override var endPoint: String {
         get { return "\(super.endPoint)/\(self.userID)/photos" }

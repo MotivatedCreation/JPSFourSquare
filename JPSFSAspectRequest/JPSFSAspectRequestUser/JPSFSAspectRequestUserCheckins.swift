@@ -14,7 +14,7 @@ import Foundation
  */
 
 
-class JPSFSAspectRequestUserCheckins: JPSFSAspectRequestUser
+class JPSFSAspectRequestUserCheckins: JPSFSPagedAspectRequest
 {
     enum Sort: String
     {
@@ -30,12 +30,9 @@ class JPSFSAspectRequestUserCheckins: JPSFSAspectRequestUser
     /*
         Number of results to return, up to 250.
      */
-    var limit: Int?
-    
-    /*
-        The number of results to skip. Used to page through results.
-     */
-    var offset: Int?
+    override var maxLimit: Int {
+        get { return 250 }
+    }
     
     /*
         How to sort the returned checkins. Can be newestfirst or oldestfirst.

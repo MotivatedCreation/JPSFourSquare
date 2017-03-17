@@ -36,15 +36,9 @@ class JPSFSAspectRequestUserVenueLikes: JPSFSAspectRequestUser
      */
     var categoryID: String?
     
-    /*
-        Number of results to return.
-     */
-    var limit: Int?
-    
-    /*
-        Used to page through results.
-     */
-    var offset: Int?
+    override var maxLimit: Int {
+        get { return 250 }
+    }
     
     override var endPoint: String {
         get { return "\(super.endPoint)/\(self.userID)/venuelikes" }

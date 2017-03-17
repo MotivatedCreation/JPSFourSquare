@@ -43,12 +43,9 @@ class JPSFSAspectRequestUserLists: JPSFSAspectRequestUser
     /*
         Number of results to return, up to 200.
      */
-    var limit: Int?
-    
-    /*
-        The number of results to skip. Used to page through results.
-     */
-    var offset: Int?
+    override var maxLimit: Int {
+        get { return 200 }
+    }
     
     override var endPoint: String {
         get { return "\(super.endPoint)/\(self.userID)/lists" }

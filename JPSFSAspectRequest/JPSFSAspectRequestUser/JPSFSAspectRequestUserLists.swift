@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreLocation
 
 
 /*
@@ -39,7 +38,7 @@ class JPSFSAspectRequestUserLists: JPSFSAspectRequestUser
     /*
         Location of the user, required in order to receive the suggested group.
      */
-    var ll: CLLocation2D?
+    var ll: (latitude: Double, longitude: Double)?
     
     /*
         Number of results to return, up to 200.

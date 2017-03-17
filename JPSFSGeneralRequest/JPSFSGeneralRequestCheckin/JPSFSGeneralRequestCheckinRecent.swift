@@ -14,7 +14,7 @@ class JPSFSGeneralRequestCheckinRecent: JPSFSGeneralRequestCheckin
     /*
         Latitude and longitude of the user's location, so response can include distance.
     */
-    var ll: CLLocation2D?
+    var ll: (latitude: Double, longitude: Double)?
     
     /*
         Number of results to return, up to 100.

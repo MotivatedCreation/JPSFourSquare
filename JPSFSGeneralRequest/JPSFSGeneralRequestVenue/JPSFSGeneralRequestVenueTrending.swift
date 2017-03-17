@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreLocation
 
 
 class JPSFSGeneralRequestVenueTrending: JPSFSGeneralRequestVenue
@@ -15,7 +14,7 @@ class JPSFSGeneralRequestVenueTrending: JPSFSGeneralRequestVenue
     /*
         required Latitude and longitude of the user's location.
      */
-    var ll: CLLocation2D!
+    var ll: (latitude: Double, longitude: Double)!
     
     /*
         Number of results to return, up to 50.

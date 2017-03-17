@@ -11,8 +11,6 @@ import Foundation
 
 class JPSFSPagedAspectRequest: JPSFSAspectRequest
 {
-    internal(set) var maxLimit: Int?
-    
     /*
         Number of results to return.
      */
@@ -36,6 +34,10 @@ class JPSFSPagedAspectRequest: JPSFSAspectRequest
         Used to page through results. Must specify a group
      */
     var offset: Int = 0
+    
+    var maxLimit: Int? {
+        get { return 50 }
+    }
     
     override var endPoint: String {
         get { return "" }

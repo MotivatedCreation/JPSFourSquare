@@ -15,7 +15,7 @@ class JPSFSGeneralRequestSpecialSearch: JPSFSGeneralRequestSpecial
     /*
         Required. Latitude and longitude to search near.
     */
-    var ll: CLLocation2D!
+    var ll: (latitude: Double, longitude: Double)!
     
     /*
         Limit results to venues within this many meters of the specified location. Defaults to a city-wide area.

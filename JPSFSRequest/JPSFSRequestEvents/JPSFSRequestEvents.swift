@@ -16,7 +16,7 @@ import Foundation
 
 class JPSFSRequestEvents: JPSFSRequest
 {
-    let eventID: String!
+    var eventID: String!
     
     override var endPoint: String {
         get { return "events/\(self.eventID)" }

@@ -55,12 +55,12 @@ class JPSFSGeneralRequestCheckinAdd: JPSFSGeneralRequestCheckin
         
         If no valid value is found, the default is public.
      */
-    var broadcast: [Broadcast]? = .`public`
+    var broadcast: [Broadcast]? = [.`public`]
     
     /*
         Latitude and longitude of the user's location. Only specify this field if you have a GPS or other device reported location for the user at the time of check-in.
      */
-    var ll: CLLocation2D?
+    var ll: (latitude: Double, longitude: Double)?
     
     /*
         Accuracy of the user's latitude and longitude, in meters.

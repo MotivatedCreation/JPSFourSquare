@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreLocation
 
 
 class JPSFSGeneralRequestVenueExplore: JPSFSGeneralRequestVenue
@@ -60,7 +59,7 @@ class JPSFSGeneralRequestVenueExplore: JPSFSGeneralRequestVenue
     /*
         required unless near is provided. Latitude and longitude of the user's location.
      */
-    var ll: CLLocation2D!
+    var ll: (latitude: Double, longitude: Double)!
     
     /*
         required unless ll is provided. A string naming a place in the world. If the near string is not geocodable, returns a failed_geocode error. Otherwise, searches within the bounds of the geocode and adds a geocode object to the response.

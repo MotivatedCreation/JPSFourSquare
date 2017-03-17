@@ -47,12 +47,12 @@ class JPSFSGeneralRequestPhotoAdd: JPSFSGeneralRequestPhoto
      
         Note that photos attached to venues, tips, and pages (updates) are always public.
      */
-    var `public`: Bool? = 0
+    var `public`: Bool? = false
     
     /*
         Latitude and longitude of the user's location.
      */
-    var ll: CLLocation2D?
+    var ll: (latitude: Double, longitude: Double)?
     
     /*
         Accuracy of the user's latitude and longitude, in meters.

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreLocation
 
 
 class JPSFSGeneralRequestVenueAdd: JPSFSGeneralRequestVenue
@@ -55,7 +54,7 @@ class JPSFSGeneralRequestVenueAdd: JPSFSGeneralRequestVenue
     /*
         required Latitude and longitude of the venue, as accurate as is known.
      */
-    var ll: CLLocation2D?
+    var ll: (latitude: Double, longitude: Double)?
     
     /*
         The ID of the category to which you want to assign this venue.

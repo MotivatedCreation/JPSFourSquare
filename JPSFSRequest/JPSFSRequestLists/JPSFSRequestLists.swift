@@ -16,6 +16,12 @@ import Foundation
 
 class JPSFSRequestLists: JPSFSRequest
 {
+    enum Sort
+    {
+        case recent
+        case nearby
+    }
+    
     var listID: String!
     var limit = 0
     var offset = 0

@@ -16,9 +16,9 @@ import Foundation
 
 class JPSFSRequestPageUpdates: JPSFSRequest
 {
-    let pageUpdateID: String!
+    var pageUpdateID: String!
     var limit = 0
-    var ll: CLLocationCoordinate2D
+    var ll: (latitude: Double, longitude: Double)?
     
     override var endPoint: String {
         get { return "pageupdates/\(self.pageUpdateID)" }

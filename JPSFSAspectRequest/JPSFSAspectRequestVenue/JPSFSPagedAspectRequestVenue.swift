@@ -9,7 +9,7 @@
 import Foundation
 
 
-class JPSFSAspectRequestVenue: JPSFSPagedAspectRequest
+class JPSFSPagedAspectRequestVenue: JPSFSPagedAspectRequest
 {
     override var endPoint: String {
         get { return "venues" }

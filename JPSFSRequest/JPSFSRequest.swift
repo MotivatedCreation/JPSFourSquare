@@ -11,12 +11,6 @@ import Foundation
 
 class JPSFSRequest
 {
-    enum Sort
-    {
-        case recent
-        case nearby
-    }
-    
     enum Mode
     {
         case foursquare

@@ -41,7 +41,7 @@ class JPSFSGeneralRequestSpecialList: JPSFSGeneralRequestSpecial
         get { return true }
     }
     
-    var userRestrictions: [UserRestrictions] {
+    override var userRestrictions: [UserRestrictions] {
         get { return [.mustBeVenueManager] }
     }
     

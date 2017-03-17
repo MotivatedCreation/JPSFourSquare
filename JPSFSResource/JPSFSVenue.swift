@@ -28,12 +28,6 @@ class JPSFSVenue: JPSFSResource
         case venue
     }
     
-    enum Flag: Bool
-    {
-        case outsideRadius = false
-        case exactMatch = false
-    }
-    
     /*
         The best known name for this venue.
     */
@@ -197,15 +191,18 @@ class JPSFSVenue: JPSFSResource
     internal(set) var roles: [Role]?
     
     /*
-     Present only for venues returned in Explore search results. Current flags include:
+     Present only for venues returned in Explore search results.
      
-     outsideRadius:
-        A boolean indicating that the venue is outside the radius specified by the original query. Explore may return venues outside the requested radius in the case of a high-quality "exact match" to the query (e.g. if the user searches for [ace bar] in Brooklyn, we will still find the popular Ace Bar venue in Manhattan and return it with outsideRadius: true).
-     
-     exactMatch:
-        A boolean indicating that the venue name was a strong match for the specified query (either it was an exact string match, or there was a large overlap between the query and the given venue's name).
+     A boolean indicating that the venue is outside the radius specified by the original query. Explore may return venues outside the requested radius in the case of a high-quality "exact match" to the query (e.g. if the user searches for [ace bar] in Brooklyn, we will still find the popular Ace Bar venue in Manhattan and return it with outsideRadius: true).
      */
-    internal(set) var flags: [Flag]?
+    internal(set) var outsideRadius = false
+    
+    /*
+     Present only for venues returned in Explore search results.
+     
+     A boolean indicating that the venue name was a strong match for the specified query (either it was an exact string match, or there was a large overlap between the query and the given venue's name).
+     */
+    internal(set) var exactMatch = false
     
     /*
         Optional
@@ -222,10 +219,10 @@ class JPSFSVenue: JPSFSResource
         
     }
     
-    func dislike()
+    /*func dislike()
     {
         
-    }
+    }*/
     
     func flag()
     {
@@ -237,10 +234,10 @@ class JPSFSVenue: JPSFSResource
         
     }
     
-    func like()
+    /*func like()
     {
         
-    }
+    }*/
     
     func setRole()
     {

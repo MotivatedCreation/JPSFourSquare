@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreLocation
 
 
 class JPSFSGeneralRequestVenueSearch: JPSFSGeneralRequestVenue
@@ -38,7 +37,7 @@ class JPSFSGeneralRequestVenueSearch: JPSFSGeneralRequestVenue
     /*
         required unless near is provided. Latitude and longitude of the user's location. (Required for query searches). Optional if using intent=global
     */
-    var ll: CLLocation2D!
+    var ll: (latitude: Double, longitude: Double)!
     
     /*
         required unless ll is provided. A string naming a place in the world. If the near string is not geocodable, returns a failed_geocode error. Otherwise, searches within the bounds of the geocode. Adds a geocode object to the response. (Required for query searches)

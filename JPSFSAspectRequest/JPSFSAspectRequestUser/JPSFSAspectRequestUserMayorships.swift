@@ -14,7 +14,7 @@ import Foundation
  */
 
 
-class JPSFSAspectRequestUserLists: JPSFSAspectRequestUser
+class JPSFSAspectRequestUserMayorships: JPSFSAspectRequestUser
 {
     /*
         Identity of the user to get mayorships for. Pass self to get friends of the acting user.

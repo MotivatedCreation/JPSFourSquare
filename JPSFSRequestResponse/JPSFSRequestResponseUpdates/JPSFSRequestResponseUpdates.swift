@@ -11,9 +11,9 @@ import Foundation
 
 class JPSFSRequestResponseUpdates: JPSFSRequestResponse
 {
-    let update: JPSFSUpadte!
+    let update: JPSFSUpdate!
     
-    init(update anUpdate: JPSFSUpdte) {
+    init(update anUpdate: JPSFSUpdate) {
         update = anUpdate
     }
 }

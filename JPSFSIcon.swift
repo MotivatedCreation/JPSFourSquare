@@ -11,5 +11,13 @@ import Foundation
 
 class JPSFSIcon
 {
+    /**
+        Start of the URL for this icon.
+    */
+    var prefix: String!
     
+    /**
+        Ending of the URL for this icon.
+    */
+    var suffix: String!
 }

@@ -12,22 +12,14 @@ import Foundation
 class JPSFSAspectRequestListSuggestVenues: JPSFSAspectRequestList
 {
     override var endPoint: String {
-        get { return "\(self.endPoint)/suggestvenues" }
-    }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
+        get { return "\(self.endPoint)/\(self.id)/suggestvenues" }
     }
     
     override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
+        get { return true }
     }
     
     override var modesSupported: [Mode] {
-        get { return [.foursquare, .swarm] }
+        get { return [.foursquare] }
     }
 }

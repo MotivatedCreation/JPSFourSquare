@@ -11,8 +11,13 @@ import Foundation
 
 class JPSFSAspectRequestListSuggestTip: JPSFSAspectRequestList
 {
+    /**
+     required id of item on this list.
+     */
+    var itemID: String!
+    
     override var endPoint: String {
-        get { return "\(self.endPoint)/suggesttip" }
+        get { return "\(self.endPoint)/\(self.id)/suggesttip" }
     }
     
     override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
@@ -20,14 +25,10 @@ class JPSFSAspectRequestListSuggestTip: JPSFSAspectRequestList
     }
     
     override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
+        get { return true }
     }
     
     override var modesSupported: [Mode] {
-        get { return [.foursquare, .swarm] }
+        get { return [.foursquare] }
     }
 }

@@ -11,23 +11,20 @@ import Foundation
 
 class JPSFSAspectRequestListItems: JPSFSAspectRequestList
 {
-    override var endPoint: String {
-        get { return "\(self.endPoint)/items" }
-    }
+    /**
+     required id of item on this list.
+     */
+    var itemID: String!
     
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
+    override var endPoint: String {
+        get { return "\(self.endPoint)/\(self.id)/\(self.itemID)" }
     }
     
     override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
+        get { return true }
     }
     
     override var modesSupported: [Mode] {
-        get { return [.foursquare, .swarm] }
+        get { return [.foursquare] }
     }
 }

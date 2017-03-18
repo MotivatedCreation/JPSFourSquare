@@ -26,11 +26,6 @@ class JPSFSAspectRequestUserLists: JPSFSPagedAspectRequestUser
     }
     
     /**
-        Identity of the user to get lists for. Pass self to get lists of the acting user.
-     */
-    var userID: String!
-    
-    /**
         can be created (lists created by this user), edited (other people's lists this user has edited), followed (lists this user follows), friends (lists from this user's friends), and suggested (lists relevant to the user's current location).
      */
     var group: Group?
@@ -48,19 +43,11 @@ class JPSFSAspectRequestUserLists: JPSFSPagedAspectRequestUser
     }
     
     override var endPoint: String {
-        get { return "\(super.endPoint)/\(self.userID)/lists" }
-    }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
+        get { return "\(super.endPoint)/\(self.id)/lists" }
     }
     
     override var requiresActingUser: Bool {
         get { return true }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
     }
     
     override var modesSupported: [Mode] {

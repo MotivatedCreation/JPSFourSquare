@@ -17,11 +17,6 @@ import Foundation
 class JPSFSAspectRequestUserVenueLikes: JPSFSPagedAspectRequestUser
 {
     /**
-        User ID or self
-     */
-    var userID: String!
-    
-    /**
         Seconds since epoch.
      */
     var beforeTimestamp: TimeInterval?
@@ -41,19 +36,11 @@ class JPSFSAspectRequestUserVenueLikes: JPSFSPagedAspectRequestUser
     }
     
     override var endPoint: String {
-        get { return "\(super.endPoint)/\(self.userID)/venuelikes" }
-    }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
+        get { return "\(super.endPoint)/\(self.id)/venuelikes" }
     }
     
     override var requiresActingUser: Bool {
         get { return true }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
     }
     
     override var modesSupported: [Mode] {

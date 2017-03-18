@@ -12,22 +12,10 @@ import Foundation
 class JPSFSAspectRequestListFollowers: JPSFSAspectRequestList
 {
     override var endPoint: String {
-        get { return "\(self.endPoint)/followers" }
-    }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
-    }
-    
-    override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
+        get { return "\(self.endPoint)/\(self.id)/followers" }
     }
     
     override var modesSupported: [Mode] {
-        get { return [.foursquare, .swarm] }
+        get { return [.foursquare] }
     }
 }

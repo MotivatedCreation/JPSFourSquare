@@ -25,14 +25,7 @@ class JPSFSAspectRequestUserCheckins: JPSFSPagedAspectRequest
     /**
         For now, only self is supported
      */
-    var userID = "self"
-    
-    /**
-        Number of results to return, up to 250.
-     */
-    override var maxLimit: Int {
-        get { return 250 }
-    }
+    override var id = "self"
     
     /**
         How to sort the returned checkins. Can be newestfirst or oldestfirst.
@@ -49,20 +42,19 @@ class JPSFSAspectRequestUserCheckins: JPSFSPagedAspectRequest
      */
     var beforeTimestamp: TimeInterval?
     
-    override var endPoint: String {
-        get { return "\(super.endPoint)/\(self.userID)/checkins" }
+    /**
+     Number of results to return, up to 250.
+     */
+    override var maxLimit: Int {
+        get { return 250 }
     }
     
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
+    override var endPoint: String {
+        get { return "\(super.endPoint)/\(self.id)/checkins" }
     }
     
     override var requiresActingUser: Bool {
         get { return true }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
     }
     
     override var modesSupported: [Mode] {

@@ -27,24 +27,15 @@ class JPSFSAspectRequestVenuePhotos: JPSFSPagedAspectRequestVenue
      */
     var group: Group?
     
+    /**
+        Number of results to return, up to 200.
+    */
     override var maxLimit: Int {
         get { return 200 }
     }
     
     override var endPoint: String {
         get { return "\(self.endPoint)/\(self.id)/photos" }
-    }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
-    }
-    
-    override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
     }
     
     override var modesSupported: [Mode] {

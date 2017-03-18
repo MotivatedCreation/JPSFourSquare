@@ -16,25 +16,12 @@ import Foundation
 
 class JPSFSAspectRequestUserTastes: JPSFSAspectRequestUser
 {
-    /**
-        Identity of the user to get tastes for. Currently, only the user ID of the acting user is supported.
-     */
-    var userID: String!
-    
     override var endPoint: String {
-        get { return "\(super.endPoint)/\(self.userID)/tastes" }
-    }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
+        get { return "\(super.endPoint)/\(self.id)/tastes" }
     }
     
     override var requiresActingUser: Bool {
         get { return true }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
     }
     
     override var modesSupported: [Mode] {

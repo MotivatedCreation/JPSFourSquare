@@ -9,7 +9,7 @@
 import Foundation
 
 
-class JPSFSGeneralRequestVenueExplore: JPSFSGeneralRequestVenue
+class JPSFSGeneralRequestVenueExplore: JPSFSPagedGeneralRequestVenue
 {
     enum Section: String
     {
@@ -97,16 +97,6 @@ class JPSFSGeneralRequestVenueExplore: JPSFSGeneralRequestVenue
     var query: String?
     
     /**
-        Number of results to return, up to 50.
-     */
-    var limit: Int?
-    
-    /**
-        Used to page through results.
-    */
-    var offset: Int?
-    
-    /**
         Pass new or old to limit results to places the acting user hasn't been or has been, respectively. Omitting this parameter returns a mixture of old and new venues.
      */
     var novelty: Novelty?
@@ -160,6 +150,13 @@ class JPSFSGeneralRequestVenueExplore: JPSFSGeneralRequestVenue
         Boolean flag to only include venues that have a special.
      */
     var specials: Bool?
+    
+    /**
+     Number of results to return, up to 50.
+     */
+    override var maxLimit: Int {
+        get { return 50 }
+    }
     
     override var endPoint: String {
         get { return "\(super.endPoint)/explore" }

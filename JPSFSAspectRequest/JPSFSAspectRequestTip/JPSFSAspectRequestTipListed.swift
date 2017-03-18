@@ -11,23 +11,25 @@ import Foundation
 
 class JPSFSAspectRequestTipListed: JPSFSAspectRequestTip
 {
+    enum Group: String
+    {
+        case created = "created"
+        case edited = "edited"
+        case followed = "followed"
+        case friends = "friends"
+        case other = "other"
+    }
+    
+    /**
+        can be created, edited, followed, friends, other. If no acting user is present, only other is supported.
+    */
+    var group: Group? = .other
+    
     override var endPoint: String {
-        get { return "\(self.endPoint)/listed" }
-    }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
-    }
-    
-    override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
+        get { return "\(self.endPoint)/\(self.id)/listed" }
     }
     
     override var modesSupported: [Mode] {
-        get { return [.foursquare, .swarm] }
+        get { return [.foursquare] }
     }
 }

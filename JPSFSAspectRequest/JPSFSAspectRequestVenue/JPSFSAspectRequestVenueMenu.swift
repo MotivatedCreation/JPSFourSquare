@@ -20,18 +20,6 @@ class JPSFSAspectRequestVenueMenu: JPSFSAspectRequestVenue
         get { return "\(self.endPoint)/\(self.id)/menu" }
     }
     
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
-    }
-    
-    override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
-    }
-    
     override var modesSupported: [Mode] {
         get { return [.foursquare] }
     }

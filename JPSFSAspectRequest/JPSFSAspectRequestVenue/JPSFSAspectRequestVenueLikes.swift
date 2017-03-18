@@ -20,18 +20,6 @@ class JPSFSAspectRequestVenueLikes: JPSFSAspectRequestVenue
         get { return "\(self.endPoint)/\(self.id)/likes" }
     }
     
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
-    }
-    
-    override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
-    }
-    
     override var modesSupported: [Mode] {
         get { return [.foursquare] }
     }

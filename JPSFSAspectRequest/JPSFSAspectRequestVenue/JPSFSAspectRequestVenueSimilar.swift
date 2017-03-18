@@ -20,16 +20,8 @@ class JPSFSAspectRequestVenueSimilar: JPSFSAspectRequestVenue
         get { return "\(self.endPoint)/\(self.id)/similar" }
     }
     
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
-    }
-    
     override var requiresActingUser: Bool {
         get { return true }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
     }
     
     override var modesSupported: [Mode] {

@@ -17,11 +17,6 @@ import Foundation
 class JPSFSAspectRequestUserFriends: JPSFSPagedAspectRequestUser
 {
     /**
-        Identity of the user to get friends of. Pass self to get friends of the acting user.
-     */
-    var userID: String!
-    
-    /**
         Number of results to return, up to 500.
      */
     override var maxLimit: Int {
@@ -29,19 +24,11 @@ class JPSFSAspectRequestUserFriends: JPSFSPagedAspectRequestUser
     }
     
     override var endPoint: String {
-        get { return "\(super.endPoint)/\(self.userID)/friends" }
-    }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
+        get { return "\(super.endPoint)/\(self.id)/friends" }
     }
     
     override var requiresActingUser: Bool {
         get { return true }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
     }
     
     override var modesSupported: [Mode] {

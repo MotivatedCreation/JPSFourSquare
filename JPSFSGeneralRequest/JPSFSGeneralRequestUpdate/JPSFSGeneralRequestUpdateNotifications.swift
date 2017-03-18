@@ -9,17 +9,21 @@
 import Foundation
 
 
-class JPSFSGeneralRequestUpdateNotifications: JPSFSGeneralRequestUpdate
+class JPSFSGeneralRequestUpdateNotifications: JPSFSPagedGeneralRequestUpdate
 {
     /**
-        Maximum number of results to return, up to 99. Notifications are grouped over time, so there will usually be fewer than 99 results available at any given time.
-    */
-    var limit: Int?
+     Maximum number of results to return, up to 99. Notifications are grouped over time, so there will usually be fewer than 99 results available at any given time.
+     */
+    override var maxLimit: Int {
+        get { return 99 }
+    }
     
     /**
-        Used to page through results. Only the 99 most recent notifications are visible, so offset must be no more than 99 - limit.
-    */
-    var offset: Int?
+     Used to page through results. Only the 99 most recent notifications are visible, so offset must be no more than 99 - limit.
+     */
+    override var maxOffset: Int {
+        get { return 99 }
+    }
     
     override var endPoint: String {
         get { return "\(super.endPoint)/notifications" }

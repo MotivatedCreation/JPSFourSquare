@@ -1,15 +1,15 @@
 //
-//  JPSFSPagedAspectRequest.swift
+//  JPSFSPagedRequest.swift
 //  Just Bucket
 //
-//  Created by Jonathan Sullivan on 3/16/17.
+//  Created by Jonathan Sullivan on 3/18/17.
 //  Copyright © 2017 Jonathan Sullivan. All rights reserved.
 //
 
 import Foundation
 
 
-class JPSFSPagedAspectRequest: JPSFSAspectRequest
+class JPSFSPagedRequest: JPSFSRequest
 {
     /**
      Number of results to return.
@@ -21,12 +21,20 @@ class JPSFSPagedAspectRequest: JPSFSAspectRequest
     }
     
     /**
-     Used to page through results. Must specify a group
+     Used to page through results.
      */
-    var offset: Int = 0
+    var offset: Int
+    {
+        get { return self.offset }
+        set { if newValue > self.maxOffset { self.offset = self.maxOffset } }
+    }
     
     var maxLimit: Int {
-        get { return 50 }
+        get { return Int.max }
+    }
+    
+    var maxOffset: Int {
+        get { return Int.max }
     }
     
     override var endPoint: String {

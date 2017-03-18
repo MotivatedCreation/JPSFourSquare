@@ -17,11 +17,6 @@ import Foundation
 class JPSFSAspectRequestUserVenueHistory: JPSFSAspectRequestUser
 {
     /**
-        For now, only self is supported.
-    */
-    var userID: String!
-    
-    /**
         Seconds since epoch.
      */
     var beforeTimestamp: TimeInterval?
@@ -37,19 +32,11 @@ class JPSFSAspectRequestUserVenueHistory: JPSFSAspectRequestUser
     var categoryId: String?
     
     override var endPoint: String {
-        get { return "\(super.endPoint)/\(self.userID)/venuehistory" }
+        get { return "\(super.endPoint)/\(self.id)/venuehistory" }
     }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
-    }
-    
+
     override var requiresActingUser: Bool {
         get { return true }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
     }
     
     override var modesSupported: [Mode] {

@@ -16,6 +16,9 @@ import Foundation
 
 class JPSFSAspectRequestVenueHereNow: JPSFSPagedAspectRequestVenue
 {
+    /**
+        Number of results to return, up to 500.
+    */
     override var maxLimit: Int {
         get { return 500 }
     }
@@ -24,16 +27,8 @@ class JPSFSAspectRequestVenueHereNow: JPSFSPagedAspectRequestVenue
         get { return "\(self.endPoint)/\(self.id)/herenow" }
     }
     
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
-    }
-    
     override var requiresActingUser: Bool {
         get { return true }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
     }
     
     override var modesSupported: [Mode] {

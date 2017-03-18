@@ -29,20 +29,4 @@ class JPSFSAspectRequestVenueStats: JPSFSAspectRequestVenue
     override var endPoint: String {
         get { return "\(self.endPoint)/\(self.id)/stats" }
     }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
-    }
-    
-    override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
-    }
-    
-    override var modesSupported: [Mode] {
-        get { return [.foursquare, .swarm] }
-    }
 }

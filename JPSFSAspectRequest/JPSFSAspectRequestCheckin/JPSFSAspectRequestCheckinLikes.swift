@@ -12,22 +12,10 @@ import Foundation
 class JPSFSAspectRequestCheckinLikes: JPSFSAspectRequestCheckin
 {
     override var endPoint: String {
-        get { return "\(self.endPoint)/likes" }
-    }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
-    }
-    
-    override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
+        get { return "\(self.endPoint)/\(self.id)/likes" }
     }
     
     override var modesSupported: [Mode] {
-        get { return [.foursquare, .swarm] }
+        get { return [.swarm] }
     }
 }

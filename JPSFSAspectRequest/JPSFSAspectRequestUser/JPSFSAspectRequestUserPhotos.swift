@@ -17,11 +17,6 @@ import Foundation
 class JPSFSAspectRequestUserPhotos: JPSFSPagedAspectRequestUser
 {
     /**
-        User ID to retrieve photos for.
-    */
-    var userID: String!
-    
-    /**
      Number of results to return, up to 500.
      */
     override var maxLimit: Int {
@@ -29,22 +24,10 @@ class JPSFSAspectRequestUserPhotos: JPSFSPagedAspectRequestUser
     }
     
     override var endPoint: String {
-        get { return "\(super.endPoint)/\(self.userID)/photos" }
+        get { return "\(super.endPoint)/\(self.id)/photos" }
     }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
-    }
-    
+
     override var requiresActingUser: Bool {
         get { return true }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
-    }
-    
-    override var modesSupported: [Mode] {
-        get { return [.foursquare, .swarm] }
     }
 }

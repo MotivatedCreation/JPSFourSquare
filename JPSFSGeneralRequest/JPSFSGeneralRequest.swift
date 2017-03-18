@@ -8,25 +8,8 @@
 
 import Foundation
 
+
 class JPSFSGeneralRequest: JPSFSRequest
 {
-    override var endPoint: String {
-        get { return "" }
-    }
     
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get, .post] }
-    }
-    
-    override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
-    }
-    
-    override var modesSupported: [Mode] {
-        get { return [.foursquare, .swarm] }
-    }
 }

@@ -9,7 +9,9 @@
 import Foundation
 
 
-class JPSFSPagedGeneralRequestUpdate
+class JPSFSPagedGeneralRequestUpdate: JPSFSGeneralRequestUpdate
 {
-    
+    override var endPoint: String {
+        get { return "updates" }
+    }
 }

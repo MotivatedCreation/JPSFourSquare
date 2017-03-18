@@ -34,10 +34,6 @@ class JPSFSGeneralRequestVenueTrending: JPSFSGeneralRequestVenue
         get { return [.get] }
     }
     
-    override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
     override var modesSupported: [Mode] {
         get { return [.swarm] }
     }

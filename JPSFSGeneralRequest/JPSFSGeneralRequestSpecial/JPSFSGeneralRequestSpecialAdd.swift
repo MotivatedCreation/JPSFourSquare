@@ -42,7 +42,7 @@ class JPSFSGeneralRequestSpecialAdd: JPSFSGeneralRequestSpecial
             Newbie Special if count1 is 1; otherwise a Loyalty Special
             unlocked on the count1th check-in (all-time)
      */
-    var type: String!
+    //var type: String!
     
     /**
         Maximum length of 16 characters. Internal id in your 3rd party system.

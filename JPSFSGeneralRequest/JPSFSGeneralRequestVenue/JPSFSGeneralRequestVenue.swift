@@ -14,20 +14,4 @@ class JPSFSGeneralRequestVenue: JPSFSGeneralRequest
     override var endPoint: String {
         get { return "venues" }
     }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get, .post] }
-    }
-    
-    override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
-    }
-    
-    override var modesSupported: [Mode] {
-        get { return [.foursquare, .swarm] }
-    }
 }

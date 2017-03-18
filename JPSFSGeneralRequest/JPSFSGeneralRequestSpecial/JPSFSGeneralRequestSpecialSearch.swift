@@ -50,10 +50,6 @@ class JPSFSGeneralRequestSpecialSearch: JPSFSGeneralRequestSpecial
         get { return [.get] }
     }
     
-    override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
     override var modesSupported: [Mode] {
         get { return [.foursquare] }
     }

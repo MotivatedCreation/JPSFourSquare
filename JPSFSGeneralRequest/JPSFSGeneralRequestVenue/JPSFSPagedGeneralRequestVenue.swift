@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+
+class JPSFSPagedGeneralRequestVenue: JPSFSPagedGeneralRequest
+{
+    override var endPoint: String {
+        get { return "venues" }
+    }
+}

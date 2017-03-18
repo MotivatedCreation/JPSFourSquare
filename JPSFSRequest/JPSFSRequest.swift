@@ -28,7 +28,7 @@ class JPSFSRequest
     }
     
     var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
+        get { return [.get, .post] }
     }
     
     var requiresActingUser: Bool {

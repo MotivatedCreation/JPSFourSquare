@@ -28,24 +28,4 @@ class JPSFSPagedAspectRequest: JPSFSAspectRequest
     var maxLimit: Int {
         get { return 50 }
     }
-    
-    override var endPoint: String {
-        get { return "" }
-    }
-    
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get] }
-    }
-    
-    override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
-    override var userRestrictions: [UserRestrictions] {
-        get { return [.none] }
-    }
-    
-    override var modesSupported: [Mode] {
-        get { return [.foursquare, .swarm] }
-    }
 }

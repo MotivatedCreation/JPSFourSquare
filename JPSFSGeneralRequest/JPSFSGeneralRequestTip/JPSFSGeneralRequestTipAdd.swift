@@ -45,10 +45,6 @@ class JPSFSGeneralRequestTipAdd: JPSFSGeneralRequestTip
         get { return [.post] }
     }
     
-    override var requiresActingUser: Bool {
-        get { return false }
-    }
-    
     override var modesSupported: [Mode] {
         get { return [.foursquare] }
     }

@@ -36,8 +36,4 @@ class JPSFSGeneralRequestUpdateNotifications: JPSFSPagedGeneralRequestUpdate
     override var requiresActingUser: Bool {
         get { return true }
     }
-    
-    override var modesSupported: [Mode] {
-        get { return [.foursquare, .swarm] }
-    }
 }

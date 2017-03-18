@@ -16,7 +16,10 @@ import Foundation
 
 class JPSFSRequestMulti: JPSFSRequest
 {
-    let requests: [JPSFSRequestResponse]!
+    /**
+     required A comma-delimited list of API requests. The parameter is constructed by encodeURIComponent("/venues/search?ll=" + encodeURIComponent("40,30") + ",/specials/search?ll=" + (encodeURIComponent("40,30"))), for example.
+     */
+    var requests: [JPSFSGeneralRequest]!
     
     override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
         get { return [.get, .post] }
@@ -32,12 +35,5 @@ class JPSFSRequestMulti: JPSFSRequest
     
     override var modesSupported: [Mode] {
         get { return [.foursquare] }
-    }
-    
-    required init(requests theRequests: [JPSFSRequestResponse])
-    {
-        requests = theRequests
-        
-        super.init()
     }
 }

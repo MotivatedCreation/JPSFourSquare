@@ -50,15 +50,7 @@ class JPSFSGeneralRequestUserSearch: JPSFSGeneralRequestUser
         get { return "\(super.endPoint)/search" }
     }
     
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get, .post] }
-    }
-    
     override var requiresActingUser: Bool {
         get { return true }
-    }
-    
-    override var modesSupported: [Mode] {
-        get { return [.foursquare, .swarm] }
     }
 }

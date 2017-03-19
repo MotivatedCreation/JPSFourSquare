@@ -1,5 +1,5 @@
 //
-//  JPSFSVenueGroupCollection.swift
+//  JPSFSCheckinCollection.swift
 //  Just Bucket
 //
 //  Created by Jonathan Sullivan on 3/18/17.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-class JPSFSVenueGroupController: JPSFSResourceController
+class JPSFSCheckinsController: JPSFSResourceController
 {
     
 }

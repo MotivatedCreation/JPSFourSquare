@@ -15,7 +15,16 @@ class JPSFSAPI: JPSRESTClient
     private static let ClientID = ""
     private static let ClientSecret = ""
     
-    deinit {
-        
-    }
+    let users = JPSFSUsersController()
+    let venues = JPSFSVenuesController()
+    let venuesGroups = JPSFSVenueGroupsController()
+    let checkins = JPSFSCheckinsController()
+    let tips = JPSFSTipsController()
+    let lists = JPSFSListsController()
+    let updates = JPSFSUpdatesController()
+    let photos = JPSFSPhotosController()
+    let settings = JPSFSSettingsController()
+    let specials = JPSFSSpecialsController()
+    let events = JPSFSEventsController()
+    let pageUpdates = JPSFSPageUpdatesController()
 }

@@ -11,5 +11,23 @@ import Foundation
 
 class JPSFSActionRequestUser: JPSFSActionRequest
 {
+    override var endPoint: String {
+        get { return "users" }
+    }
     
+    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
+        get { return [.post] }
+    }
+    
+    override var requiresActingUser: Bool {
+        get { return false }
+    }
+    
+    override var userRestrictions: [UserRestrictions] {
+        get { return [.none] }
+    }
+    
+    override var modesSupported: [Mode] {
+        get { return [.foursquare, .swarm] }
+    }
 }

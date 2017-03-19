@@ -21,16 +21,8 @@ class JPSFSRequestMulti: JPSFSRequest
      */
     var requests: [JPSFSGeneralRequest]!
     
-    override var validHTTPMethods: [JPSRESTClient.HTTPMethod] {
-        get { return [.get, .post] }
-    }
-    
     override var endPoint: String {
         get { return "multi" }
-    }
-    
-    override var requiresActingUser: Bool {
-        get { return false }
     }
     
     override var modesSupported: [Mode] {

@@ -9,7 +9,7 @@
 import Foundation
 
 
-class JPSFSPagedGeneralRequest: JPSFSRequest
+class JPSFSPagedGeneralRequest: JPSFSPagedRequest
 {
     
 }

@@ -40,7 +40,7 @@ class JPSFSAPI: NSObject
     {
         self.processRequestCompletionHandler = completion
         
-        let escapedURLString = "\(BaseURL)/\(request.urlRequestSuffix)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        let escapedURLString = "\(BaseURL)/\(request.endPoint)?\(request.parameters)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         let url = URL(string: escapedURLString)
         let urlRequest = URLRequest(url: url)
         

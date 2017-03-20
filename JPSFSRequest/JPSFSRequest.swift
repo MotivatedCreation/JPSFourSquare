@@ -12,13 +12,13 @@ import Foundation
 @objc(JPSFSRequest)
 class JPSFSRequest: NSObject
 {
-    enum Mode
+    enum Mode: String
     {
-        case foursquare
-        case swarm
+        case swarm = "swarm"
+        case foursquare = "foursquare"
     }
     
-    enum UserRestrictions
+    enum UserRestriction
     {
         case none
         case mustBeVenueManager
@@ -26,10 +26,22 @@ class JPSFSRequest: NSObject
     
     var httpMethod: JPSRESTClient.HTTPMethod = .get
     
-    var urlRequest: URLRequest
+    var urlRequestSuffix: String
     {
-        get {
-            return URLRequest(url: URL(string: "")!)
+        get
+        {
+            var urlRequestSuffix = ""
+            
+            let mirror = Mirror(reflecting: self)
+            
+            for (index, attribute) in mirror.children.enumerated()
+            {
+                if let propertyName = (attribute.label as String!) {
+                    urlRequestSuffix.append("\(propertyName)=\(attribute.value)")
+                }
+            }
+            
+            return urlRequestSuffix
         }
     }
     
@@ -45,7 +57,7 @@ class JPSFSRequest: NSObject
         get { return false }
     }
     
-    var userRestrictions: [UserRestrictions] {
+    var userRestrictions: [UserRestriction] {
         get { return [.none] }
     }
     

@@ -30,7 +30,7 @@ class JPSFSRequest: NSObject
     {
         get
         {
-            var urlRequestSuffix = ""
+            var urlRequestSuffix = "\(self.endPoint)?"
             
             let mirror = Mirror(reflecting: self)
             
@@ -38,6 +38,7 @@ class JPSFSRequest: NSObject
             {
                 if let propertyName = (attribute.label as String!) {
                     urlRequestSuffix.append("\(propertyName)=\(attribute.value)")
+                    urlRequestSuffix.append("&")
                 }
             }
             

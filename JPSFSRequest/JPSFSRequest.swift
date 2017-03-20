@@ -26,23 +26,22 @@ class JPSFSRequest: NSObject
     
     var httpMethod: JPSRESTClient.HTTPMethod = .get
     
-    var urlRequestSuffix: String
+    var parameters: [String: String]
     {
         get
         {
-            var urlRequestSuffix = "\(self.endPoint)?"
+            var parameters = [String: String]()
             
             let mirror = Mirror(reflecting: self)
             
             for (index, attribute) in mirror.children.enumerated()
             {
                 if let propertyName = (attribute.label as String!) {
-                    urlRequestSuffix.append("\(propertyName)=\(attribute.value)")
-                    urlRequestSuffix.append("&")
+                    parameters[propertyName] = "\(attribute.value)"
                 }
             }
             
-            return urlRequestSuffix
+            return parameters
         }
     }
     

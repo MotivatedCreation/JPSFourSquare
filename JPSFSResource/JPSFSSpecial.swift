@@ -44,7 +44,7 @@ class JPSFSSpecial: JPSFSResource
     /**
         A description of how to unlock the special.
      */
-    internal(set) var description: String!
+    //internal(set) var description: String!
     
     /**
         The specific rules for this special.
@@ -84,7 +84,7 @@ class JPSFSSpecial: JPSFSResource
         locked
             the special is locked (all other types)
      */
-    internal(set) var state: State!
+    internal(set) var state: JPSFSSpecial.State!
     
     /**
         A description of how close you are to unlocking the special. Either the number of people who have already unlocked the special (flash and swarm specials), or the number of your friends who have already checked in (friends specials)

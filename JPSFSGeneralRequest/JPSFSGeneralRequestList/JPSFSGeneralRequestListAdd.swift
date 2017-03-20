@@ -19,7 +19,7 @@ class JPSFSGeneralRequestListAdd: JPSFSGeneralRequestList
     /**
         The description of the list.
      */
-    var description: String?
+    //var description: String?
     
     /**
         Boolean indicating if this list can be edited by friends.

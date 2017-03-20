@@ -66,7 +66,7 @@ class JPSFSGeneralRequestVenueAdd: JPSFSGeneralRequestVenue
     /**
         A freeform description of the venue, up to 160 characters.
      */
-    var description: String?
+    //var description: String?
     
     /**
         The url of the homepage of the venue.

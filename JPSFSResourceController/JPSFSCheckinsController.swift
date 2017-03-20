@@ -11,5 +11,31 @@ import Foundation
 
 class JPSFSCheckinsController: JPSFSResourceController
 {
-    
+//    func checkin(for id: String) -> JPSFSCheckin
+//    {
+//        self.api.process(request: request, completion: { (data: Data) -> Void in
+//            completion(users, unmatchedSearchTerms)
+//        })
+//    }
+//    
+//    func resolve(request: JPSFSGeneralRequestCheckinResolve) -> JPSFSCheckin
+//    {
+//        self.api.process(request: request, completion: { (data: Data) -> Void in
+//            completion(users, unmatchedSearchTerms)
+//        })
+//    }
+//    
+//    func recent(request: JPSFSGeneralRequestCheckinRecent) -> [JPSFSCheckin]
+//    {
+//        self.api.process(request: request, completion: { (data: Data) -> Void in
+//            completion(users, unmatchedSearchTerms)
+//        })
+//    }
+//    
+//    func add(request: JPSFSGeneralRequestCheckinAdd) -> (checkin: JPSFSCheckin, notifications: JPSFSNotifications)
+//    {
+//        self.api.process(request: request, completion: { (data: Data) -> Void in
+//            completion(users, unmatchedSearchTerms)
+//        })
+//    }
 }

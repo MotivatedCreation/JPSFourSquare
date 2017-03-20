@@ -9,7 +9,8 @@
 import Foundation
 
 
-class JPSFSRequest
+@objc(JPSFSRequest)
+class JPSFSRequest: NSObject
 {
     enum Mode
     {
@@ -21,6 +22,15 @@ class JPSFSRequest
     {
         case none
         case mustBeVenueManager
+    }
+    
+    var httpMethod: JPSRESTClient.HTTPMethod = .get
+    
+    var urlRequest: URLRequest
+    {
+        get {
+            return URLRequest(url: URL(string: "")!)
+        }
     }
     
     var endPoint: String {

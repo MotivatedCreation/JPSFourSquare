@@ -11,5 +11,21 @@ import Foundation
 
 class JPSFSListsController: JPSFSResourceController
 {
-    
+//    func list(for id: String) -> JPSFSList
+//    {
+//        let request = JPSFSGeneralRequestList()
+//        
+//        self.api.process(request: request, completion: { (data: Data) -> Void in
+//            completion(users, unmatchedSearchTerms)
+//        })
+//    }
+//    
+//    func add(request: JPSFSGeneralRequestListAdd) -> JPSFSList
+//    {
+//        let request = JPSFSGeneralRequestListAdd()
+//        
+//        self.api.process(request: request, completion: { (data: Data) -> Void in
+//            completion(users, unmatchedSearchTerms)
+//        })
+//    }
 }

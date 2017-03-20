@@ -11,5 +11,19 @@ import Foundation
 
 class JPSFSUpdatesController: JPSFSResourceController
 {
-    
+//    func update(for id: String) -> JPSFSUpdate
+//    {
+//        let request = JPSFSRequestUpdates()
+//        
+//        self.api.process(request: request, completion: { (data: Data) -> Void in
+//            completion(users, unmatchedSearchTerms)
+//        })
+//    }
+//    
+//    func notifications(request: JPSFSGeneralRequestUpdateNotifications) -> JPSFSUpdate
+//    {
+//        self.api.process(request: request, completion: { (data: Data) -> Void in
+//            completion(users, unmatchedSearchTerms)
+//        })
+//    }
 }

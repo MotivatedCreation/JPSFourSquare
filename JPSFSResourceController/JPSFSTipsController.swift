@@ -11,5 +11,18 @@ import Foundation
 
 class JPSFSTipsController: JPSFSResourceController
 {
-    
+//    func tip(for id: String) -> JPSFSTip
+//    {
+//        let request = JPSFSRequestTips()
+//        self.api.process(request: request, completion: { (data: Data) -> Void in
+//            completion(users, unmatchedSearchTerms)
+//        })
+//    }
+//    
+//    func add(request: JPSFSGeneralRequestTipAdd) -> JPSFSTip
+//    {
+//        self.api.process(request: request, completion: { (data: Data) -> Void in
+//            completion(users, unmatchedSearchTerms)
+//        })
+//    }
 }

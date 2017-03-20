@@ -24,7 +24,7 @@ class JPSFSList: JPSFSUserResource
     /**
         The user-entered list description.
      */
-    internal(set) var description: String!
+    //internal(set) var description: String!
     
     /**
         The compact user who created this list.

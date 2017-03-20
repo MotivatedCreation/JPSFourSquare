@@ -14,6 +14,7 @@ import Foundation
  */
 
 
+@objc(JPSFSVenue)
 class JPSFSVenue: JPSFSResource
 {
     enum Role
@@ -108,7 +109,7 @@ class JPSFSVenue: JPSFSResource
     /**
         Description of the venue provided by venue owner.
     */
-    internal(set) var description: String?
+    //internal(set) var description: String?
     
     /**
         Seconds since epoch when the venue was created.

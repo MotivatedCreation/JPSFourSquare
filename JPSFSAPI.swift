@@ -14,7 +14,7 @@ class JPSFSAPI: NSObject
 {
     typealias ProcessRequestCompletionHandler = ((_ json: JPSRESTClient.JSON) -> Void)
     
-    static let BaseURL = "https://api.foursquare.com/v2/"
+    static let BaseURL = "https://api.foursquare.com/v2"
     
     let clientID: String!
     let clientSecret: String!
@@ -40,7 +40,9 @@ class JPSFSAPI: NSObject
     {
         self.processRequestCompletionHandler = completion
         
-        let urlRequest = request.urlRequest
+        let escapedURLString = "\(BaseURL)/\(request.urlRequestSuffix)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        let url = URL(string: escapedURLString)
+        let urlRequest = URLRequest(url: url)
         
         switch request.httpMethod
         {

@@ -26,10 +26,39 @@ class JPSFSRequest: NSObject
     
     var httpMethod: JPSRESTClient.HTTPMethod = .get
     
-    var urlRequest: URLRequest
+    var parameters: [String: String]
     {
         get {
-            return URLRequest(url: URL(string: "")!)
+            let mirror = Mirror(reflecting: self)
+            
+            var parameters = [String: String]()
+            
+            for (_, attribute) in mirror.children.enumerated()
+            {
+                let value = "\(attribute.value)"
+                
+                guard let label = attribute.label, value != "nil" else { continue }
+                
+                parameters[label] = value
+            }
+            
+            return parameters
+        }
+    }
+    
+    var uri: String
+    {
+        get
+        {
+            var parametersArray = [String]()
+            
+            for (name, value) in self.parameters {
+                parametersArray.append("\(name)=\(value)")
+            }
+            
+            let joinedParameters = (parametersArray.count > 0 ? parametersArray.joined(separator: "&") : "")
+            
+            return "\(self.endPoint)/\(joinedParameters)"
         }
     }
     

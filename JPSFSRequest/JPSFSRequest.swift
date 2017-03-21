@@ -12,13 +12,13 @@ import Foundation
 @objc(JPSFSRequest)
 class JPSFSRequest: NSObject
 {
-    enum Mode
+    enum Mode: String
     {
-        case foursquare
-        case swarm
+        case swarm = "swarm"
+        case foursquare = "foursquare"
     }
     
-    enum UserRestrictions
+    enum UserRestriction
     {
         case none
         case mustBeVenueManager
@@ -74,7 +74,7 @@ class JPSFSRequest: NSObject
         get { return false }
     }
     
-    var userRestrictions: [UserRestrictions] {
+    var UserRestriction: [UserRestriction] {
         get { return [.none] }
     }
     

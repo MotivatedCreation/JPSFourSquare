@@ -66,7 +66,7 @@ class JPSFSGeneralRequestSpecialAdd: JPSFSGeneralRequestSpecial
         get { return true }
     }
     
-    override var userRestrictions: [UserRestrictions] {
+    override var UserRestriction: [UserRestriction] {
         get { return [.mustBeVenueManager] }
     }
     

@@ -28,7 +28,7 @@ class JPSFSGeneralRequestVenueGroupDelete: JPSFSGeneralRequestVenueGroup
         get { return true }
     }
     
-    override var userRestrictions: [JPSFSRequest.UserRestrictions] {
+    override var UserRestriction: [JPSFSRequest.UserRestriction] {
         get { return [.mustBeVenueManager] }
     }
     

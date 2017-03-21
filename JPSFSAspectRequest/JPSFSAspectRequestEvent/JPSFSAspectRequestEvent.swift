@@ -23,7 +23,7 @@ class JPSFSAspectRequestEvent: JPSFSAspectRequest
         get { return false }
     }
     
-    override var userRestrictions: [UserRestrictions] {
+    override var UserRestriction: [UserRestriction] {
         get { return [.none] }
     }
     
